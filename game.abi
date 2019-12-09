@@ -1,0 +1,237 @@
+[
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "close",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getInfo",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			},
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_outcome",
+				"type": "uint8"
+			}
+		],
+		"name": "setRealOutcome",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getOutcome",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_outcome",
+				"type": "uint8"
+			}
+		],
+		"name": "getTotalStake",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getIsOver",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getIsOpen",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_outcome",
+				"type": "uint8"
+			}
+		],
+		"name": "shareOutBonus",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "suicide",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_outcome",
+				"type": "uint8"
+			}
+		],
+		"name": "bet",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "takemoney",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "open",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"name": "_gameid",
+				"type": "string"
+			},
+			{
+				"name": "_gameinfo",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_player",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "_outcome",
+				"type": "uint8"
+			}
+		],
+		"name": "LogBet",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"name": "LogSetRealOutcome",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_player",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "_value",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "_success",
+				"type": "bool"
+			}
+		],
+		"name": "LogShareOutBonus",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [],
+		"name": "LogOpen",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [],
+		"name": "LogClose",
+		"type": "event"
+	}
+]

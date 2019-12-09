@@ -1,0 +1,172 @@
+[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "string"
+			}
+		],
+		"name": "Open",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "Withdraw",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "string"
+			}
+		],
+		"name": "Close",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "string"
+			}
+		],
+		"name": "KillGame",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "string"
+			}
+		],
+		"name": "ShareOutBonus",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "string"
+			},
+			{
+				"name": "_gameinfo",
+				"type": "string"
+			}
+		],
+		"name": "NewGame",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "string"
+			},
+			{
+				"name": "_outcome",
+				"type": "uint8"
+			}
+		],
+		"name": "SetRealOutcome",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "string"
+			}
+		],
+		"name": "GetContractAddress",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_id",
+				"type": "string"
+			}
+		],
+		"name": "TakeMoney",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_id",
+				"type": "string"
+			}
+		],
+		"name": "LogNewGame",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_id",
+				"type": "string"
+			}
+		],
+		"name": "LogKillGame",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [],
+		"name": "LogWithdraw",
+		"type": "event"
+	}
+]
