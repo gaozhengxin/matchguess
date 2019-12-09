@@ -74,6 +74,7 @@ contract Game is IterableMap {
     event LogShareOutBonus(address _player, uint256 _value, bool _success);
     event LogOpen();
     event LogClose();
+    event LogTakeMoney(uint256);
     
     function Game(string _gameid, string _gameinfo) {
         gameid = _gameid;
@@ -123,6 +124,7 @@ contract Game is IterableMap {
         if (_outcome == lose) {
             IterableMap.add(stakeLose, msg.sender, msg.value);
         }
+        LogBet(msg.sender, _outcome);
         players[msg.sender].hasBet = true;
     }
     
@@ -159,6 +161,7 @@ contract Game is IterableMap {
         if (_outcome == lose) {
             totalBonus = getTotalStake(win) + getTotalStake(draw);
         }
+        totalBonus = totalBonus * 9 / 10;
         require(this.balance >= totalBonus);
         uint256 totalstake = getTotalStake(_outcome);
         address player;
@@ -199,7 +202,9 @@ contract Game is IterableMap {
     
     function takemoney() isBookmaker {
         if (!isOver) throw;
-        bookmaker.send(this.balance);
+        uint256 val = this.balance;
+        bookmaker.send(val);
+        LogTakeMoney(val);
     }
     
     // bookmaker
@@ -212,8 +217,8 @@ contract Bookmaker {
     address owner;
     
     event LogNewGame(string _id);
-    event LogKillGame(string _id);
-    event LogWithdraw();
+    event LogKillGame(string _id, string _info);
+    event LogWithdraw(uint256 _value);
     
     modifier isOwner {
         require(msg.sender == owner);
@@ -264,12 +269,14 @@ contract Bookmaker {
     
     function KillGame(string _id) isOwner {
         Game game = Game(games[_id]);
+        string memory info;
+        (, info) = game.getInfo();
         game.suicide();
-        LogKillGame(_id);
+        LogKillGame(_id, info);
     }
     
     function Withdraw() isOwner {
         owner.send(this.balance);
-        LogWithdraw();
+        LogWithdraw(this.balance);
     }
 }

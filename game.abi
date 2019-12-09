@@ -233,5 +233,17 @@
 		"inputs": [],
 		"name": "LogClose",
 		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "LogTakeMoney",
+		"type": "event"
 	}
 ]

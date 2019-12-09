@@ -158,6 +158,11 @@
 				"indexed": false,
 				"name": "_id",
 				"type": "string"
+			},
+			{
+				"indexed": false,
+				"name": "_info",
+				"type": "string"
 			}
 		],
 		"name": "LogKillGame",
@@ -165,7 +170,13 @@
 	},
 	{
 		"anonymous": false,
-		"inputs": [],
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "_value",
+				"type": "uint256"
+			}
+		],
 		"name": "LogWithdraw",
 		"type": "event"
 	}
